@@ -3,7 +3,7 @@ import Countdown from "../../components/timer/Countdown";
 
 const HomePage: FC = () =>{
     return <main className="container h-full">
-        <Countdown />
+        <Countdown  />
     </main>
 }
 

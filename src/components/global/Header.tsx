@@ -5,7 +5,7 @@ import Logo from "../../assets/images/KevDevlogo.jpg"
 const Header: FC = () =>{
     return <header className="grown-0 h-24 px-4 py-2 flex items-center justify-between w-full" >
         <Link to={paths.home}>
-            <h1 className="h-12 font-semibold">
+            <h1 className="h-12 text-2xl font-semibold">
                 Kev<span className="text-cyan-400">Dev</span>
             </h1>
         </Link>
