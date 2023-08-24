@@ -2,9 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import workAudioFile from '../assets/audio/shamisen.mp3';
 import restAudioFile from '../assets/audio/cuenco.mp3';
 
+//variables
 const timer_Radius = 117;
 const total_Dashoffset = 2 * Math.PI * timer_Radius;
 
+//variable sounds of states
 const workSound = new Audio(workAudioFile);
 const restSound = new Audio(restAudioFile);
 
@@ -18,7 +20,7 @@ interface useTimerProps {
   rest?: number;
   work?: number;
 }
-
+//count minutes and seconds
 function convertSecondsTime(time: number) {
   const minutes = Math.floor(time / 60)
     .toString()
@@ -39,6 +41,7 @@ const useTimer = ({ periods = 4, rest = 5, work = 25 }: useTimerProps) => {
 
   const animationElementRef = useRef<SVGSVGElement | null>(null);
 
+  //Animation circle
   useEffect(() => {
     if (animationElementRef.current) {
       animationElementRef.current.style.animationDuration = `${
@@ -50,7 +53,9 @@ const useTimer = ({ periods = 4, rest = 5, work = 25 }: useTimerProps) => {
       animationElementRef.current.style.strokeDashoffset = `${total_Dashoffset}`;
     }
   }, [animationElementRef, work]);
+  //Animation circle end
 
+  //count down time set to 0
   useEffect(() => {
     const interval = setInterval(() => {
       if (running) setTime((prevTime) => prevTime - 1);
@@ -79,6 +84,7 @@ const useTimer = ({ periods = 4, rest = 5, work = 25 }: useTimerProps) => {
       }, 1000);
     }
   }, [elapsedPeriods, onRest, periods, rest, time, work]);
+
 
   useEffect(() => {
     if (elapsedPeriods === periods) {
@@ -113,6 +119,8 @@ const useTimer = ({ periods = 4, rest = 5, work = 25 }: useTimerProps) => {
   };
 
   const { minutes, seconds } = convertSecondsTime(time);
+
+  //return variables for components
   return {
     animationElementRef,
     elapsedPeriods,

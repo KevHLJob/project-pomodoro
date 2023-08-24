@@ -1,3 +1,4 @@
+//links for the page
 const paths ={
 home:"/"
 } as const;

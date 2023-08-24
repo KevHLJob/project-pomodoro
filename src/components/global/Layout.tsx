@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import ButtomNav from "./ButtomNav";
 import Header from "./Header";
 
-
+//add components -> Header, ButtomNav
 const Layout: FC = () =>{
     return <div className="h-screen flex flex-col justify-between 
     items-stretch overflow-hidden bg-background text-white">

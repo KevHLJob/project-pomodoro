@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { ComponentProps, FC } from "react";
 
+//all buttons
 type CustomProps = {
     color?: 'primary' | 'secondary';
     size?: 'sm' | 'md' | 'lg';

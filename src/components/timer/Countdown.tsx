@@ -6,7 +6,7 @@ import {GiMeditation} from '@react-icons/all-files/gi/GiMeditation';
 import {GiNinjaMask} from '@react-icons/all-files/gi/GiNinjaMask';
 
 
-
+// counter periods, rest, work, minutes, seconds, circle
 interface CountdownProps {
     periods?: number;
     rest?: number;

@@ -1,6 +1,7 @@
 import { FC } from "react";
 import Button from "../global/Button";
 
+// counter states
 interface CountdownStateProps{
     running?: boolean;
     isStarted:boolean;

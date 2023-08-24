@@ -5,6 +5,7 @@ import HomePage from "../../pages/home/HomePage";
 import NotFound from "../../pages/common/NotFound";
 import paths from "../../config/paths";
 
+//Links for HomePage or Notfound page
 const Router: FC = () => {
     const routes = useRoutes([
         {

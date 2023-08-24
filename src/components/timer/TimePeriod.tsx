@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { FC } from "react";
 
+//counter periods
 interface TimePeriodProps{
 active?: boolean;
 elapsed?: boolean
